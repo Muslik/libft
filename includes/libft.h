@@ -6,13 +6,14 @@
 /*   By: dmorgil <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:28:05 by dmorgil           #+#    #+#             */
-/*   Updated: 2019/04/19 12:19:05 by dmorgil          ###   ########.fr       */
+/*   Updated: 2019/05/27 18:00:01 by dzhab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define ft_memdel(ptr) ft_memdel((void **)&(ptr))
 # define BUFF_SZ 1024
 
 # include <string.h>
@@ -65,7 +66,7 @@ typedef	union		u_ldouble
 }					t_ldouble;
 
 void				*ft_memalloc(size_t size);
-void				ft_memdel(void **ap);
+void				ft_memdel(void **ptr);
 void				*ft_realloc(void *ptr, size_t prev_size, size_t new_size);
 void				ft_free_darray(char **args);
 void				ft_swap(int *a, int *b);

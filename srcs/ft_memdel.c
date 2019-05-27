@@ -6,16 +6,16 @@
 /*   By: dmorgil <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 11:01:28 by dmorgil           #+#    #+#             */
-/*   Updated: 2018/11/24 21:10:01 by dmorgil          ###   ########.fr       */
+/*   Updated: 2019/05/27 17:58:23 by dzhab            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_memdel(void **ap)
+void	ft_memdel(void **ptr)
 {
-	if (!ap)
-		return ;
-	free(*ap);
-	*ap = NULL;
+	if (ptr != NULL && *ptr != NULL) {
+		free(*ptr);
+		*ptr = NULL;
+	}
 }
