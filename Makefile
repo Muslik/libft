@@ -6,7 +6,7 @@
 #    By: dmorgil <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/10 17:38:22 by dmorgil           #+#    #+#              #
-#    Updated: 2019/04/19 12:18:52 by dmorgil          ###   ########.fr        #
+#    Updated: 2019/05/28 14:11:47 by dmorgil          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #
@@ -78,7 +78,7 @@ $(NAME): $(OBJB)
 	@ranlib $(NAME)
 	@echo "$(GREEN)DONE$(NC)"
 
-$(OBJD)%.o : $(SRCD)%.c $(INCLUDES) Makefile
+$(OBJD)%.o : $(SRCD)%.c $(_INCLUDES) Makefile
 	@printf "\r\033[K$(CGREEN)Compiling$(NC): $<"
 	@mkdir -p $(OBJD)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I$(INCLUDES_D)
