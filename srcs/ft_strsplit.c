@@ -6,7 +6,7 @@
 /*   By: dmorgil <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 17:36:05 by dmorgil           #+#    #+#             */
-/*   Updated: 2019/04/19 12:13:14 by dmorgil          ###   ########.fr       */
+/*   Updated: 2019/05/28 15:08:19 by dmorgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char		**ft_strsplit(char const *s, char c)
 	while (*s && *s == c)
 		++s;
 	num = get_num((char*)s, c);
-	arr = (char **)ft_xmalloc(sizeof(char *) * num + 1);
+	arr = (char **)ft_xmalloc(sizeof(char *) * num + 1 *sizeof(char *));
 	i = -1;
 	while (++i < num)
 	{
