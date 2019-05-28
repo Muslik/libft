@@ -6,14 +6,14 @@
 #    By: dmorgil <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/10 17:38:22 by dmorgil           #+#    #+#              #
-#    Updated: 2019/05/28 15:04:23 by dmorgil          ###   ########.fr        #
+#    Updated: 2019/05/28 15:05:57 by dmorgil          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #
 NAME			= 	libft.a
 CC				= 	gcc
-SRCD			=	srcs/
-OBJD			=	objs/
+SRCD			=	./srcs/
+OBJD			=	./objs/
 FLAGS			=	-Wall -Wextra -Werror -O3 -Ofast
 INCLUDES_D		=	includes/
 
@@ -59,8 +59,6 @@ OBJS			=	$(LIB_O) $(PRINT_O)
 
 OBJB			=	$(addprefix $(OBJD), $(OBJS))
 
-INC				=	$(addprefix $(INCLUDES_D), $_INCLUDES)
-
 # COLORS
 RED				=	\033[0;31m
 GREEN			=	\033[0;32m
@@ -80,12 +78,12 @@ $(NAME): $(OBJB)
 	@ranlib $(NAME)
 	@echo "$(GREEN)DONE$(NC)"
 
-$(OBJD)%.o : $(SRCD)%.c $(INC) Makefile
+$(OBJD)%.o : $(SRCD)%.c $(INCLUDES) Makefile
 	@printf "\r\033[K$(CGREEN)Compiling$(NC): $<"
 	@mkdir -p $(OBJD)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I$(INCLUDES_D)
 
-$(OBJD)%.o: $(SRCD)ft_printf/%.c $(INC) Makefile
+$(OBJD)%.o: $(SRCD)ft_printf/%.c $(INCLUDES) Makefile
 	@printf "\r\033[K$(CGREEN)Compiling$(NC): $<"
 	@mkdir -p $(OBJD)
 	@$(CC) $(CFLAGS) -o $@ -c $< -I$(INCLUDES_D)

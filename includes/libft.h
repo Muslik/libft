@@ -6,14 +6,13 @@
 /*   By: dmorgil <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:28:05 by dmorgil           #+#    #+#             */
-/*   Updated: 2019/05/27 18:00:01 by dzhab            ###   ########.fr       */
+/*   Updated: 2019/05/28 15:06:25 by dmorgil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define ft_memdel(ptr) ft_memdel((void **)&(ptr))
 # define BUFF_SZ 1024
 
 # include <string.h>
